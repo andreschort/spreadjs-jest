@@ -34,5 +34,27 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "jest": {    
+    "moduleNameMapper": {
+      "@grapecity/spread-sheets-charts(.*)": "<rootDir>/public/js/spreadjs/gc.spread.sheets.charts.14.2.0.min.js",
+      "@grapecity/spread-sheets-languagepackages(.*)": "<rootDir>/public/js/spreadjs/gc.spread.calcengine.languagepackages.14.2.0.min.js",
+      "@grapecity/spread-sheets-shapes(.*)": "<rootDir>/public/js/spreadjs/gc.spread.sheets.shapes.14.2.0.min.js",
+      "@grapecity/spread-sheets-print(.*)": "<rootDir>/public/js/spreadjs/gc.spread.sheets.print.14.2.0.min.js",
+      "@grapecity/spread-sheets-barcode(.*)": "<rootDir>/public/js/spreadjs/gc.spread.sheets.barcode.14.2.0.min.js",
+      "@grapecity/spread-sheets-pdf(.*)": "<rootDir>/public/js/spreadjs/gc.spread.sheets.pdf.14.2.0.min.js",
+      "@grapecity/spread-sheets-pivot-addon(.*)": "<rootDir>/public/js/spreadjs/gc.spread.pivot.pivottables.14.2.0.min.js",
+      "@grapecity/spread-sheets(.*)": "<rootDir>/public/js/spreadjs/gc.spread.sheets.all.14.2.0.min.js",
+      "@grapecity/spread-excelio(.*)": "<rootDir>/public/js/spreadjs/gc.spread.excelio.14.2.0.min.js"
+    },
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!@bbnpm)/"
+    ]
+  },
+  "devDependencies": {
+    "jest-canvas-mock": "^2.3.1"
   }
 }
